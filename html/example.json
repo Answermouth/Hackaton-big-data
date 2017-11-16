@@ -1,0 +1,11 @@
+data: {
+	event : [
+		{
+			start:"May 28 2006 09:00:00 GMT",
+			end:"Jun 15 2006 09:00:00 GMT",
+			isDuration:"true",
+			title:"Writing Timeline documentation",
+			image:"http://simile.mit.edu/images/csail-logo.gif"
+		}
+	]
+}

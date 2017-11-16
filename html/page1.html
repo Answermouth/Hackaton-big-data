@@ -3,9 +3,10 @@
    <head>
      <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
      <script src="http://api.simile-widgets.org/timeline/2.3.1/timeline-api.js?bundle=true" type="text/javascript"></script>     
+	 <link rel="stylesheet" href="style.css">
    </head>
    <body onload="onLoad();" onresize="onResize();">
-	<div id="my-timeline" style="height: 150px; border: 1px solid #aaa"></div>
+	<div id="my-timeline" style="height: 500px; border: 1px solid #aaa"></div>
 	<noscript>
 	This page uses Javascript to show you a Timeline. Please enable Javascript in your browser to see the full page. Thank you.
 	</noscript>
@@ -14,19 +15,29 @@
    <script>
 	var tl;
 	function onLoad() {
-	  var eventSource = new Timeline.DefaultEventSource();
-	  var bandInfos = [
+		var theme = Timeline.ClassicTheme.create(); // create the theme	
+		theme.firstDayOfWeek = 1;
+		theme.event.bubble.width = 350;
+		theme.event.bubble.height = 300;
+		theme.event.track.height = 25;			
+		theme.event.track.gap = 6;
+		
+		var eventSource = new Timeline.DefaultEventSource();
+		var bandInfos = [
 		Timeline.createBandInfo({
+			align:	"Center",
 			eventSource:    eventSource,
 			date:           "Jun 28 2006 00:00:00 GMT",
-			width:          "70%", 
+			width:          "80%", 
 			intervalUnit:   Timeline.DateTime.MONTH, 
-			intervalPixels: 100
+			intervalPixels: 100,
+			theme: theme
 		}),
 		Timeline.createBandInfo({
+			overview: true,
 			eventSource:    eventSource,
 			date:           "Jun 28 2006 00:00:00 GMT",
-			width:          "30%", 
+			width:          "20%", 
 			intervalUnit:   Timeline.DateTime.YEAR, 
 			intervalPixels: 200
 		})
