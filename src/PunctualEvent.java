@@ -1,7 +1,13 @@
-package PACKAGE_NAME;
-
 /**
  * Created by Ansel on 17/11/2017.
  */
-public class ponctualEvent {
+public class PunctualEvent extends Event {
+
+    public PunctualEvent(String name, long datetime) {
+        super(name, datetime);
+    }
+
+    public PunctualEvent(String name, String datetime) {
+        super(name, Long.parseLong(datetime));
+    }
 }
