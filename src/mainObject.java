@@ -2,6 +2,7 @@ import ca.pfv.spmf.algorithms.sequentialpatterns.prefixspan.AlgoPrefixSpan;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Collections;
 
 /**
  * Created by Ansel on 16/11/2017.
@@ -9,8 +10,123 @@ import java.util.ArrayList;
 
 public class mainObject {
 
-    public static Sequence spliceSequence(Pattern pattern, Sequence sequence) {
+    public static String convertToName(String code) {
+        int codeInt = Integer.parseInt(code.trim());
+        switch (codeInt) {
+            case 200:
+                return "Anesthesie";
+            case 201:
+                return "Antibiologie";
+            case 202:
+                return "Bloc operatoire";
+            case 203:
+                return "Brancardage";
+            case 204:
+                return "Cardiologie";
+            case 205:
+                return "Chirurgie";
+            case 206:
+                return "Curietherapie";
+            case 207:
+                return "Dermatologie";
+            case 208:
+                return "Diabetologie";
+            case 209:
+                return "Dietetique";
+            case 210:
+                return "Education Therapeutique";
+            case 211:
+                return "Endoscopie";
+            case 212:
+                return "Ext";
+            case 213:
+                return "Imagerie";
+            case 214:
+                return "Kine";
+            case 215:
+                return "Labo";
+            case 216:
+                return "Oncogenetique";
+            case 217:
+                return "Oncologie";
+            case 218:
+                return "Onco-Senologie";
+            case 219:
+                return "Ophtalmologie";
+            case 220:
+                return "Pharmacie";
+            case 221:
+                return "Radiotherapie";
+            case 222:
+                return "RCP";
+            case 223:
+                return "Recherche Clinique";
+            case 224:
+                return "SISSPO";
+            case 225:
+                return "Stomathérapie";
+            case 226:
+                return "SISSPO";
+            case 227:
+                return "";
+            case 228:
+                return "";
+        }
         return null;
+    }
+
+
+    public static void writeToFile(int i, Sequence sequence) throws IOException {
+        File file = new File("html/xmls/" + i + ".xml");
+        FileWriter fileWriter = new FileWriter(file);
+        BufferedWriter writer = new BufferedWriter(fileWriter);
+
+        writer.write("<data>");
+        writer.newLine();
+
+        for (Event event : sequence.getEvents()) {
+            String str = event.toXml();
+            writer.write(str);
+        }
+        writer.write("</data>");
+        writer.flush();
+    }
+
+    public static ArrayList<Event> replacePattern(Pattern pattern, Sequence sequence) {
+        ArrayList<Event> rst = new ArrayList<Event>();
+        boolean found;
+        int i = 0;
+        while (i < sequence.getEvents().size() - pattern.getItems().size() + 1) {
+            found = true;
+            for (int j = 0; j < pattern.getItems().size(); j ++) {
+                if (Integer.parseInt(sequence.getEvent(i+j).getName().trim()) != pattern.getItems().get(j)) {
+                    found = false;
+                    break;
+                }
+            }
+            if (found == true) {
+                Event event;
+                if (pattern.getItems().size() > 1) {
+                    long start = sequence.getEvent(i).getDatetime();
+                    long end = sequence.getEvent(i+pattern.getItems().size()-1).getDatetime();
+                    if (start > end) {
+                        end = sequence.getEvent(i).getDatetime();
+                        start = sequence.getEvent(i+pattern.getItems().size()-1).getDatetime();
+                    }
+                    event = new DurationEvent(pattern.toString(), start, end);
+                    rst.add(event);
+
+                    for (int j = 0; j < pattern.getItems().size(); j ++) {
+                        sequence.getEvents().remove(i);
+                    }
+                }// else {
+                   // event = new PunctualEvent(pattern.toString(), sequence.getEvent(i).getDatetime());
+                //}
+            }
+            i++;
+        }
+
+        return rst;
     }
 
     public static void main(String[] args) {
@@ -65,8 +181,9 @@ public class mainObject {
             Integer i = 0;
 
             Sequence sequence = new Sequence();
+            Sequence splicedSequence = new Sequence();
 
-            while ((line = bfreader.readLine()) != null && (line2 = bfreader2.readLine()) != null) {
+            while ((line = bfreader.readLine()) != null && (line2 = bfreader2.readLine()) != null && i < 10) {
                 sequenceRaw = line.substring(0, line.length() - 5).split(" -1 ");
                 timestampsRaw = line2.split(" ");
 
@@ -74,11 +191,18 @@ public class mainObject {
                     sequence.addEvent(new PunctualEvent(sequenceRaw[j], timestampsRaw[j]));
                 }
 
+                Collections.reverse(patterns);// reverse to start with longest patterns
                 for(Pattern pattern : patterns) {
                     if (pattern.getFoundIn().contains(i)) {
-                        spliceSequence(pattern, sequence);
+                        ArrayList<Event> events = replacePattern(pattern, sequence);
+                        if (events.size() > 0)
+                            splicedSequence.addEvents(events);
                     }
                 }
+                if (splicedSequence.getEvents().size() > 0)
+                    writeToFile(i, splicedSequence);
+                else
+                    writeToFile(i, sequence);
                 i++;
             }
             System.out.println("Finished pattern matching");

@@ -2,12 +2,12 @@
  * Created by Ansel on 17/11/2017.
  */
 public abstract class Event {
-    private String name;
-    private long datetime;
+    protected String name;
+    protected long datetime;
 
     public Event(String name, long datetime) {
         this.name = name;
-        datetime = datetime;
+        this.datetime = datetime;
     }
 
     public String getName() {
@@ -25,4 +25,6 @@ public abstract class Event {
     public void setDatetime(long datetime) {
         datetime = datetime;
     }
+
+    public abstract String toXml();
 }

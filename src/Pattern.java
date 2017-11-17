@@ -44,4 +44,13 @@ public class Pattern {
     public void setFoundIn(ArrayList<Integer> foundIn) {
         this.foundIn = foundIn;
     }
+
+    @Override
+    public String toString() {
+        String output = "";
+        for (int i : this.items) {
+            output += i + " ";
+        }
+        return output.trim();
+    }
 }
