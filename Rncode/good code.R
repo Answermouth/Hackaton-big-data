@@ -82,10 +82,9 @@ replaceServByLetter2 <- function(x) {
 }
 
 
-
 # data import
 library(readr)
-data <- read_csv("C:/Users/Ansel/Desktop/hackaton/csvs/nice_data.csv", 
+data <- read_csv("../data/nice_data.csv", 
                       col_types = cols(DATETIME = col_datetime(format = "%Y%m%d%H%M")))
 
 # data preparation
@@ -99,7 +98,7 @@ data["NISERVICE"] <- apply(data["NISERVICE"], 1, replaceServByLetter2)
 # data export
 tabPatient <- unique(data$NIPATIENT)
 
-file.remove("C:/Users/Ansel/Desktop/hackaton/ans/test", "C:/Users/Ansel/Desktop/hackaton/ans/datetimes.csv")
+file.remove("../data/prepared_data", "../data/datetimes")
 
 for (i in 1:length(tabPatient)){
   
@@ -111,6 +110,6 @@ for (i in 1:length(tabPatient)){
   dt <- c(datetime)
   rsl <- c(rsl,-2)
   
-  write(gsub(',', '', toString(rsl)), file = "C:/Users/Ansel/Desktop/hackaton/ans/test",append = TRUE, sep = " ")
-  write(gsub(',', '', toString(dt)), file = "C:/Users/Ansel/Desktop/hackaton/ans/datetimes.csv",append = TRUE, sep = ",")
+  write(gsub(',', '', toString(rsl)), file = "../data/prepared_data",append = TRUE, sep = " ")
+  write(gsub(',', '', toString(dt)), file = "../data/datetimes",append = TRUE, sep = " ")
 }
