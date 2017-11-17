@@ -10,9 +10,274 @@ import java.util.Collections;
 
 public class mainObject {
 
-    public static String convertToName(String code) {
-        int codeInt = Integer.parseInt(code.trim());
-        switch (codeInt) {
+    public static String convertToFullName(String code) {
+        switch (code) {
+            case "225;":
+			    return "SISSPO";
+            case "225; 225;":
+				return "SISSPO";
+            case "225; 225; 225;":
+				return "SISSPO";
+            case "225; 213;":
+				return "test";
+            case "200;":
+				return "test";
+            case "200; 213;":
+				return "test";
+            case "200; 200;":
+				return "test";
+            case "200; 205;":
+				return "Chirurgie";
+            case "200; 205; 205;":
+				return "Chirurgie";
+            case "205;":
+				return "test";
+            case "205; 212;":
+				return "test";
+            case "205; 213;":
+				return "test";
+            case "205; 213; 213;":
+				return "test";
+            case "205; 213; 213; 213;":
+				return "test";
+            case "205; 213; 213; 213; 213;":
+				return "test";
+            case "205; 213; 205;":
+				return "test";
+            case "205; 200;":
+				return "test";
+            case "205; 217;":
+				return "test";
+            case "205; 217; 217;":
+				return "test";
+            case "205; 205;":
+				return "test";
+            case "205; 205; 213;":
+				return "test";
+            case "205; 205; 213; 213;":
+				return "test";
+            case "205; 205; 205;":
+				return "Chirurgie";
+            case "205; 205; 205; 205;":
+				return "Chirurgie";
+            case "205; 205; 205; 205; 205;":
+				return "Chirurgie";
+            case "212;":
+				return "test";
+            case "212; 212;":
+				return "test";
+            case "212; 213;":
+				return "test";
+            case "212; 213; 213;":
+				return "test";
+            case "212; 213; 213; 213;":
+				return "test";
+            case "212; 217;":
+				return "test";
+            case "212; 217; 217;":
+				return "test";
+            case "213;":
+				return "test";
+            case "213; 225;":
+				return "test";
+            case "213; 225; 225;":
+				return "test";
+            case "213; 225; 213;":
+				return "test";
+            case "213; 212;":
+				return "test";
+            case "213; 212; 213;":
+				return "test";
+            case "213; 213;":
+				return "test";
+            case "213; 213; 225;":
+				return "test";
+            case "213; 213; 212;":
+				return "test";
+            case "213; 213; 213;":
+				return "test";
+            case "213; 213; 213; 212;":
+				return "test";
+            case "213; 213; 213; 213;":
+				return "test";
+            case "213; 213; 213; 213; 213;":
+				return "test";
+            case "213; 213; 213; 213; 217;":
+				return "test";
+            case "213; 213; 213; 217;":
+				return "test";
+            case "213; 213; 213; 217; 217;":
+				return "test";
+            case "213; 213; 217;":
+				return "test";
+            case "213; 213; 217; 213;":
+				return "test";
+            case "213; 213; 217; 213; 213;":
+				return "test";
+            case "213; 213; 217; 213; 217;":
+				return "test";
+            case "213; 213; 217; 217;":
+				return "test";
+            case "213; 213; 217; 217; 213;":
+				return "test";
+            case "213; 213; 217; 217; 217;":
+				return "test";
+            case "213; 213; 205;":
+				return "test";
+            case "213; 200;":
+				return "test";
+            case "213; 217;":
+				return "test";
+            case "213; 217; 213;":
+				return "test";
+            case "213; 217; 213; 213;":
+				return "test";
+            case "213; 217; 213; 213; 213;":
+				return "test";
+            case "213; 217; 213; 213; 217;":
+				return "test";
+            case "213; 217; 213; 217;":
+				return "test";
+            case "213; 217; 213; 217; 213;":
+				return "test";
+            case "213; 217; 213; 217; 217;":
+				return "test";
+            case "213; 217; 217;":
+				return "test";
+            case "213; 217; 217; 213;":
+				return "test";
+            case "213; 217; 217; 213; 213;":
+				return "test";
+            case "213; 217; 217; 213; 217;":
+				return "test";
+            case "213; 217; 217; 217;":
+				return "test";
+            case "213; 217; 217; 217; 213;":
+				return "test";
+            case "213; 217; 217; 217; 217;":
+				return "test";
+            case "213; 221;":
+				return "test";
+            case "213; 205;":
+				return "test";
+            case "213; 205; 213;":
+				return "test";
+            case "213; 205; 205;":
+				return "test";
+            case "217;":
+				return "test";
+            case "217; 225;":
+				return "test";
+            case "217; 212;":
+				return "test";
+            case "217; 212; 212;":
+				return "test";
+            case "217; 212; 213;":
+				return "test";
+            case "217; 212; 217;":
+				return "test";
+            case "217; 212; 217; 217;":
+				return "test";
+            case "217; 213;":
+				return "test";
+            case "217; 213; 225;":
+				return "test";
+            case "217; 213; 212;":
+				return "test";
+            case "217; 213; 213;":
+				return "test";
+            case "217; 213; 213; 213;":
+				return "test";
+            case "217; 213; 213; 213; 213;":
+				return "test";
+            case "217; 213; 213; 213; 217;":
+				return "test";
+            case "217; 213; 213; 217;":
+				return "test";
+            case "217; 213; 213; 217; 213;":
+				return "test";
+            case "217; 213; 213; 217; 217;":
+				return "test";
+            case "217; 213; 217;":
+				return "test";
+            case "217; 213; 217; 213;":
+				return "test";
+            case "217; 213; 217; 213; 213;":
+				return "test";
+            case "217; 213; 217; 213; 217;":
+				return "test";
+            case "217; 213; 217; 217;":
+				return "test";
+            case "217; 213; 217; 217; 213;":
+				return "test";
+            case "217; 213; 217; 217; 217;":
+				return "test";
+            case "217; 200;":
+				return "test";
+            case "217; 217;":
+				return "test";
+            case "217; 217; 212;":
+				return "test";
+            case "217; 217; 213;":
+				return "test";
+            case "217; 217; 213; 213;":
+				return "test";
+            case "217; 217; 213; 213; 213;":
+				return "test";
+            case "217; 217; 213; 213; 217;":
+				return "test";
+            case "217; 217; 213; 217;":
+				return "test";
+            case "217; 217; 213; 217; 213;":
+				return "test";
+            case "217; 217; 213; 217; 217;":
+				return "test";
+            case "217; 217; 217;":
+				return "test";
+            case "217; 217; 217; 212;":
+				return "test";
+            case "217; 217; 217; 213;":
+				return "test";
+            case "217; 217; 217; 213; 213;":
+				return "test";
+            case "217; 217; 217; 213; 217;":
+				return "test";
+            case "217; 217; 217; 217;":
+				return "test";
+            case "217; 217; 217; 217; 213;":
+				return "test";
+            case "217; 217; 217; 217; 217;":
+				return "test";
+            case "217; 221;":
+				return "test";
+            case "217; 205;":
+				return "test";
+            case "217; 205; 205;":
+				return "test";
+            case "221;":
+				return "test";
+            case "221; 213;":
+				return "test";
+            case "221; 213; 213;":
+				return "test";
+            case "221; 221;":
+				return "test";
+            case "221; 221; 213;":
+				return "test";
+            case "221; 221; 221;":
+				return "test";
+            case "221; 221; 221; 221;":
+				return "test";
+            case "221; 221; 221; 221; 221;":
+				return "test";
+            case "223;":
+				return "test";
+        }
+        return "Unknown";
+    }
+
+    public static String convertToName(int code) {
+        switch (code) {
             case 200:
                 return "Anesthesie";
             case 201:
@@ -38,7 +303,7 @@ public class mainObject {
             case 211:
                 return "Endoscopie";
             case 212:
-                return "Ext";
+                return "Exterieur";
             case 213:
                 return "Imagerie";
             case 214:
@@ -58,26 +323,27 @@ public class mainObject {
             case 221:
                 return "Radiotherapie";
             case 222:
-                return "RCP";
+                return "Radiotherapie";
             case 223:
-                return "Recherche Clinique";
+                return "RCP";
             case 224:
-                return "SISSPO";
+                return "Recherche Clinique";
             case 225:
-                return "Stomathérapie";
-            case 226:
                 return "SISSPO";
+            case 226:
+                return "Stomathérapie";
             case 227:
-                return "";
+                return "Tete et Cou";
             case 228:
-                return "";
+                return "xxxRDG";
         }
-        return null;
+        return "Unknown";
     }
 
 
     public static void writeToFile(int i, Sequence sequence) throws IOException {
-        File file = new File("html/xmls/" + i + ".xml");
+        File file = new File("C:\\Apache24\\htdocs\\hackaton-big-data\\xmls\\" + i + ".xml");
+        //File file = new File("html/xmls/" + i + ".xml");
         FileWriter fileWriter = new FileWriter(file);
         BufferedWriter writer = new BufferedWriter(fileWriter);
 
@@ -113,11 +379,15 @@ public class mainObject {
                         end = sequence.getEvent(i).getDatetime();
                         start = sequence.getEvent(i+pattern.getItems().size()-1).getDatetime();
                     }
-                    event = new DurationEvent(pattern.toString(), start, end);
-                    rst.add(event);
 
-                    for (int j = 0; j < pattern.getItems().size(); j ++) {
-                        sequence.getEvents().remove(i);
+                    if (!(start == 1184709600L)) {
+                        event = new DurationEvent(pattern.toString(), start, end);
+                        ((DurationEvent) event).setPattern(pattern);
+                        rst.add(event);
+
+                        for (int j = 0; j < pattern.getItems().size(); j ++) {
+                            sequence.getEvents().remove(i);
+                        }
                     }
                 }// else {
                    // event = new PunctualEvent(pattern.toString(), sequence.getEvent(i).getDatetime());
@@ -145,7 +415,7 @@ public class mainObject {
 
             // load patterns
             System.out.println("Loading patterns");
-            File patternsFile = new File("data/patterns");
+            File patternsFile = new File("data/patterns2");
             FileReader fileReader = new FileReader(patternsFile);
             BufferedReader bfreader = new BufferedReader(fileReader);
             String line;
@@ -183,7 +453,7 @@ public class mainObject {
             Sequence sequence = new Sequence();
             Sequence splicedSequence = new Sequence();
 
-            while ((line = bfreader.readLine()) != null && (line2 = bfreader2.readLine()) != null && i < 10) {
+            while ((line = bfreader.readLine()) != null && (line2 = bfreader2.readLine()) != null) {
                 sequenceRaw = line.substring(0, line.length() - 5).split(" -1 ");
                 timestampsRaw = line2.split(" ");
 

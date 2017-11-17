@@ -45,12 +45,22 @@ public class Pattern {
         this.foundIn = foundIn;
     }
 
+    public String toStringDetailed() {
+        String output = "";
+        for (int i : this.items) {
+            output += mainObject.convertToName(i) + "; ";
+        }
+
+        return output.trim();
+    }
+
     @Override
     public String toString() {
         String output = "";
         for (int i : this.items) {
-            output += i + " ";
+            output += i + "; ";
         }
-        return output.trim();
+
+        return mainObject.convertToFullName(output.trim());
     }
 }

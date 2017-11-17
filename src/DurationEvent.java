@@ -9,10 +9,19 @@ import java.util.TimeZone;
  */
 public class DurationEvent extends Event{
     private long endTime;
+    private Pattern pattern;
 
     public DurationEvent(String name, long datetime, long endTime) {
         super(name, datetime);
         this.endTime = endTime;
+    }
+
+    public Pattern getPattern() {
+        return pattern;
+    }
+
+    public void setPattern(Pattern pattern) {
+        this.pattern = pattern;
     }
 
     public DurationEvent(String name, long datetime, String endTime) {
@@ -34,7 +43,9 @@ public class DurationEvent extends Event{
         output += "        isDuration=\"true\"\n";
         output += "        title=\"" + this.name + "\"\n";
         output += "        >\n";
-        output += "        " + this.name + "\n";
+        output += "        " + this.name + "  |  Details:\n";
+        if (this.pattern != null)
+            output += "        " + pattern.toStringDetailed() + "\n";
         output += "        </event>\n\n";
 
         return output;

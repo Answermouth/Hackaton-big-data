@@ -1,0 +1,130 @@
+SISSPO; #SUP: 289
+SISSPO; SISSPO; #SUP: 244
+SISSPO; SISSPO; SISSPO; #SUP: 214
+SISSPO; Imagerie; #SUP: 220
+Anesthesie; #SUP: 284
+Anesthesie; Imagerie; #SUP: 210
+Anesthesie; Anesthesie; #SUP: 216
+Anesthesie; Chirurgie; #SUP: 229
+Anesthesie; Chirurgie; Chirurgie; #SUP: 203
+Chirurgie; #SUP: 509
+Chirurgie; Externe; #SUP: 224
+Chirurgie; Imagerie; #SUP: 327
+Chirurgie; Imagerie; Imagerie; #SUP: 295
+Chirurgie; Imagerie; Imagerie; Imagerie; #SUP: 256
+Chirurgie; Imagerie; Imagerie; Imagerie; Imagerie; #SUP: 240
+Chirurgie; Imagerie; Chirurgie; #SUP: 208
+Chirurgie; Anesthesie; #SUP: 213
+Chirurgie; Oncologie; #SUP: 220
+Chirurgie; Oncologie; Oncologie; #SUP: 208
+Chirurgie; Chirurgie; #SUP: 353
+Chirurgie; Chirurgie; Imagerie; #SUP: 226
+Chirurgie; Chirurgie; Imagerie; Imagerie; #SUP: 207
+Chirurgie; Chirurgie; Chirurgie; #SUP: 316
+Chirurgie; Chirurgie; Chirurgie; Chirurgie; #SUP: 259
+Chirurgie; Chirurgie; Chirurgie; Chirurgie; Chirurgie; #SUP: 232
+Externe; #SUP: 391
+Externe; Externe; #SUP: 262
+Externe; Imagerie; #SUP: 272
+Externe; Imagerie; Imagerie; #SUP: 238
+Externe; Imagerie; Imagerie; Imagerie; #SUP: 205
+Externe; Oncologie; #SUP: 222
+Externe; Oncologie; Oncologie; #SUP: 209
+Imagerie; #SUP: 653
+Imagerie; SISSPO; #SUP: 249
+Imagerie; SISSPO; SISSPO; #SUP: 212
+Imagerie; SISSPO; Imagerie; #SUP: 201
+Imagerie; Externe; #SUP: 289
+Imagerie; Externe; Imagerie; #SUP: 226
+Imagerie; Imagerie; #SUP: 593
+Imagerie; Imagerie; SISSPO; #SUP: 228
+Imagerie; Imagerie; Externe; #SUP: 248
+Imagerie; Imagerie; Imagerie; #SUP: 494
+Imagerie; Imagerie; Imagerie; Externe; #SUP: 201
+Imagerie; Imagerie; Imagerie; Imagerie; #SUP: 454
+Imagerie; Imagerie; Imagerie; Imagerie; Imagerie; #SUP: 385
+Imagerie; Imagerie; Imagerie; Imagerie; Oncologie; #SUP: 208
+Imagerie; Imagerie; Imagerie; Oncologie; #SUP: 222
+Imagerie; Imagerie; Imagerie; Oncologie; Oncologie; #SUP: 212
+Imagerie; Imagerie; Oncologie; #SUP: 269
+Imagerie; Imagerie; Oncologie; Imagerie; #SUP: 221
+Imagerie; Imagerie; Oncologie; Imagerie; Imagerie; #SUP: 208
+Imagerie; Imagerie; Oncologie; Imagerie; Oncologie; #SUP: 200
+Imagerie; Imagerie; Oncologie; Oncologie; #SUP: 244
+Imagerie; Imagerie; Oncologie; Oncologie; Imagerie; #SUP: 209
+Imagerie; Imagerie; Oncologie; Oncologie; Oncologie; #SUP: 226
+Imagerie; Imagerie; Chirurgie; #SUP: 230
+Imagerie; Anesthesie; #SUP: 207
+Imagerie; Oncologie; #SUP: 285
+Imagerie; Oncologie; Imagerie; #SUP: 244
+Imagerie; Oncologie; Imagerie; Imagerie; #SUP: 226
+Imagerie; Oncologie; Imagerie; Imagerie; Imagerie; #SUP: 201
+Imagerie; Oncologie; Imagerie; Imagerie; Oncologie; #SUP: 204
+Imagerie; Oncologie; Imagerie; Oncologie; #SUP: 230
+Imagerie; Oncologie; Imagerie; Oncologie; Imagerie; #SUP: 201
+Imagerie; Oncologie; Imagerie; Oncologie; Oncologie; #SUP: 217
+Imagerie; Oncologie; Oncologie; #SUP: 266
+Imagerie; Oncologie; Oncologie; Imagerie; #SUP: 225
+Imagerie; Oncologie; Oncologie; Imagerie; Imagerie; #SUP: 210
+Imagerie; Oncologie; Oncologie; Imagerie; Oncologie; #SUP: 208
+Imagerie; Oncologie; Oncologie; Oncologie; #SUP: 247
+Imagerie; Oncologie; Oncologie; Oncologie; Imagerie; #SUP: 206
+Imagerie; Oncologie; Oncologie; Oncologie; Oncologie; #SUP: 233
+Imagerie; Radiotherapie; #SUP: 211
+Imagerie; Chirurgie; #SUP: 255
+Imagerie; Chirurgie; Imagerie; #SUP: 209
+Imagerie; Chirurgie; Chirurgie; #SUP: 211
+Oncologie; #SUP: 673
+Oncologie; SISSPO; #SUP: 230
+Oncologie; Externe; #SUP: 297
+Oncologie; Externe; Externe; #SUP: 209
+Oncologie; Externe; Imagerie; #SUP: 219
+Oncologie; Externe; Oncologie; #SUP: 216
+Oncologie; Externe; Oncologie; Oncologie; #SUP: 203
+Oncologie; Imagerie; #SUP: 493
+Oncologie; Imagerie; SISSPO; #SUP: 200
+Oncologie; Imagerie; Externe; #SUP: 227
+Oncologie; Imagerie; Imagerie; #SUP: 457
+Oncologie; Imagerie; Imagerie; Imagerie; #SUP: 390
+Oncologie; Imagerie; Imagerie; Imagerie; Imagerie; #SUP: 361
+Oncologie; Imagerie; Imagerie; Imagerie; Oncologie; #SUP: 213
+Oncologie; Imagerie; Imagerie; Oncologie; #SUP: 258
+Oncologie; Imagerie; Imagerie; Oncologie; Imagerie; #SUP: 213
+Oncologie; Imagerie; Imagerie; Oncologie; Oncologie; #SUP: 235
+Oncologie; Imagerie; Oncologie; #SUP: 277
+Oncologie; Imagerie; Oncologie; Imagerie; #SUP: 237
+Oncologie; Imagerie; Oncologie; Imagerie; Imagerie; #SUP: 218
+Oncologie; Imagerie; Oncologie; Imagerie; Oncologie; #SUP: 223
+Oncologie; Imagerie; Oncologie; Oncologie; #SUP: 260
+Oncologie; Imagerie; Oncologie; Oncologie; Imagerie; #SUP: 219
+Oncologie; Imagerie; Oncologie; Oncologie; Oncologie; #SUP: 242
+Oncologie; Anesthesie; #SUP: 209
+Oncologie; Oncologie; #SUP: 383
+Oncologie; Oncologie; Externe; #SUP: 223
+Oncologie; Oncologie; Imagerie; #SUP: 284
+Oncologie; Oncologie; Imagerie; Imagerie; #SUP: 272
+Oncologie; Oncologie; Imagerie; Imagerie; Imagerie; #SUP: 231
+Oncologie; Oncologie; Imagerie; Imagerie; Oncologie; #SUP: 246
+Oncologie; Oncologie; Imagerie; Oncologie; #SUP: 256
+Oncologie; Oncologie; Imagerie; Oncologie; Imagerie; #SUP: 225
+Oncologie; Oncologie; Imagerie; Oncologie; Oncologie; #SUP: 243
+Oncologie; Oncologie; Oncologie; #SUP: 356
+Oncologie; Oncologie; Oncologie; Externe; #SUP: 205
+Oncologie; Oncologie; Oncologie; Imagerie; #SUP: 266
+Oncologie; Oncologie; Oncologie; Imagerie; Imagerie; #SUP: 248
+Oncologie; Oncologie; Oncologie; Imagerie; Oncologie; #SUP: 246
+Oncologie; Oncologie; Oncologie; Oncologie; #SUP: 338
+Oncologie; Oncologie; Oncologie; Oncologie; Imagerie; #SUP: 246
+Oncologie; Oncologie; Oncologie; Oncologie; Oncologie; #SUP: 319
+Oncologie; Radiotherapie; #SUP: 201
+Oncologie; Chirurgie; #SUP: 255
+Oncologie; Chirurgie; Chirurgie; #SUP: 216
+Radiotherapie; #SUP: 441
+Radiotherapie; Imagerie; #SUP: 255
+Radiotherapie; Imagerie; Imagerie; #SUP: 215
+Radiotherapie; Radiotherapie; #SUP: 385
+Radiotherapie; Radiotherapie; Imagerie; #SUP: 212
+Radiotherapie; Radiotherapie; Radiotherapie; #SUP: 312
+Radiotherapie; Radiotherapie; Radiotherapie; Radiotherapie; #SUP: 275
+Radiotherapie; Radiotherapie; Radiotherapie; Radiotherapie; Radiotherapie; #SUP: 220
+RCP; #SUP: 233
